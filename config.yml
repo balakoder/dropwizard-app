@@ -1,0 +1,25 @@
+#Server configuration.
+server:
+    applicationConnectors:
+    - type: http
+      port: 8080
+# Database settings.
+database:
+    # the name of the JDBC driver, mysql in our case
+    driverClass: com.mysql.jdbc.Driver
+    # the username
+    user: root
+    # the password
+    password: root
+    # the JDBC URL; the database is called DWGettingStarted
+    url: jdbc:mysql://localhost:3306/dropwz
+
+ 
+
+#Jersey client settings
+jerseyClient:
+    #The maximum idle time for a connection, once established.
+    timeout: 512ms
+    #The size of the work queue of the pool used for asynchronous requests.
+    #Additional threads will be spawn only if the queue is reached its maximum size.
+    workQueueSize: 16
